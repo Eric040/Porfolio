@@ -76,9 +76,12 @@ const handlers = {
      * @return {Promise<{success: boolean}>}
      */
     sendEmailRequest: async (validationBundle, publicKey, serviceId, templateId) => {
-        emailjs.init(publicKey)
-
         const response = {success: false}
+
+        if(!publicKey || !serviceId || !templateId)
+            return response
+
+        emailjs.init(publicKey)
 
         try {
             const result = await emailjs.send(serviceId, templateId, validationBundle)

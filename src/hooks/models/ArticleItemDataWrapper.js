@@ -45,7 +45,7 @@ export default class ArticleItemDataWrapper {
         this.copyToClipboardButton = rawData.copyToClipboardButton || false
         this.locales = this._parseLocales(rawData.locales, language)
         this.percentage = this._parseNumber(rawData.percentage, 0, 100)
-        this.preview = this._parsePreview(rawData.preview, language)
+        this.preview = this._parsePreview(rawData.preview, language, this.locales)
     }
 
     _parseNumber(rawNumber, min = -99999999999, max = 99999999999) {
@@ -123,6 +123,9 @@ export default class ArticleItemDataWrapper {
             tags: language.getTranslation(locales, "tags", []),
             text: language.getTranslation(locales, "text", null),
             label: language.getTranslation(locales, "label", null),
+            github: language.getTranslation(locales, "github", null),
+            demo: language.getTranslation(locales, "demo", null),
+            images: language.getTranslation(locales, "images", []),
         }
 
         if(translations.list && Array.isArray(translations.list)) {
@@ -134,18 +137,32 @@ export default class ArticleItemDataWrapper {
         return translations
     }
 
-    _parsePreview(rawPreview, language) {
-        if(!rawPreview)
-            return {}
-
-        const links = rawPreview["links"].map(rawLink => {
+    _parsePreview(rawPreview, language, locales = {}) {
+        const rawLinks = rawPreview?.["links"] || []
+        const links = rawLinks.map(rawLink => {
             return this._parseLink(rawLink, language)
-        })
+        }).filter(Boolean)
 
-        const screenshots = rawPreview["screenshots"] || []
+        if(locales.github) {
+            links.unshift(this._parseLink({
+                href: locales.github,
+                faIcon: "fa-brands fa-github",
+                tooltipString: "see_on_github"
+            }, language))
+        }
+
+        if(locales.demo) {
+            links.unshift(this._parseLink({
+                href: locales.demo,
+                faIcon: "fa-solid fa-arrow-up-right-from-square",
+                tooltipString: "open_website"
+            }, language))
+        }
+
+        const screenshots = rawPreview?.["screenshots"] || rawPreview?.["images"] || locales.images || []
         const supportedRatios = ["16:9", "1:1", "9:16"]
 
-        let screenshotsAspectRatio = rawPreview["screenshotsAspectRatio"]
+        let screenshotsAspectRatio = rawPreview?.["screenshotsAspectRatio"]
         if(screenshots.length > 0 && supportedRatios.indexOf(screenshotsAspectRatio) === -1) {
             screenshotsAspectRatio = "1:1"
             utils.log.warn("ArticleItemDataWrapper", "Invalid screenshotsAspectRatio value. Supported values are: " + supportedRatios.join(", ") + ". Using default value 1:1.")
@@ -154,12 +171,12 @@ export default class ArticleItemDataWrapper {
         return {
             hasLinks: links.length > 0,
             hasScreenshots: screenshots.length > 0,
-            hasScreenshotsOrYoutubeVideo: screenshots.length > 0 || rawPreview.youtubeVideo,
+            hasScreenshotsOrYoutubeVideo: screenshots.length > 0 || rawPreview?.youtubeVideo,
             screenshotsAspectRatio: screenshotsAspectRatio,
 
             links: links,
             screenshots: screenshots,
-            youtubeVideo: rawPreview.youtubeVideo
+            youtubeVideo: rawPreview?.youtubeVideo
         }
     }
 

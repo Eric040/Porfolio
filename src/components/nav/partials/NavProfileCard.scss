@@ -18,12 +18,81 @@ div.nav-profile-card {
     position: relative;
     margin: 15px;
 
+    &-avatar-container {
+        position: relative;
+        width: var(--avatar-size);
+        height: var(--avatar-size);
+    }
+
     &-avatar {
         width: var(--avatar-size);
         height: var(--avatar-size);
         border: var(--border-size) solid var(--theme-card-background-accent);
         border-radius: calc($standard-border-radius * 2);
         border-top-right-radius: 0;
+
+        &.animated-avatar {
+            animation: profileImageSpectacular 2s ease-in-out;
+            box-shadow: 0 0 30px rgba(var(--bs-primary-rgb), 0.6);
+        }
+    }
+
+    @keyframes profileImageSpectacular {
+        0% {
+            opacity: 1;
+            transform: scale(1) rotateY(0deg);
+            filter: brightness(1) saturate(1);
+            box-shadow: 0 0 0 rgba(var(--bs-primary-rgb), 0);
+        }
+        25% {
+            opacity: 0.8;
+            transform: scale(1.1) rotateY(90deg);
+            filter: brightness(1.3) saturate(1.5);
+            box-shadow: 0 0 40px rgba(var(--bs-primary-rgb), 0.8);
+        }
+        50% {
+            opacity: 0.3;
+            transform: scale(0.8) rotateY(180deg);
+            filter: brightness(0.7) saturate(0.5);
+            box-shadow: 0 0 60px rgba(var(--bs-primary-rgb), 1);
+        }
+        75% {
+            opacity: 0.8;
+            transform: scale(1.15) rotateY(270deg);
+            filter: brightness(1.4) saturate(1.8);
+            box-shadow: 0 0 50px rgba(var(--bs-primary-rgb), 0.9);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1) rotateY(360deg);
+            filter: brightness(1) saturate(1);
+            box-shadow: 0 0 0 rgba(var(--bs-primary-rgb), 0);
+        }
+    }
+
+    &-avatar-container::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: calc($standard-border-radius * 2.5);
+        background: linear-gradient(45deg, var(--bs-primary), var(--bs-info), var(--bs-primary));
+        opacity: 0;
+        z-index: -1;
+        animation: profileGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes profileGlow {
+        0%, 100% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        50% {
+            opacity: 0.3;
+            transform: scale(1.05);
+        }
     }
 
     &-status-circle {

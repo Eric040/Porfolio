@@ -1,6 +1,6 @@
 import "./Preloader.scss"
 import React, {useEffect, useState} from 'react'
-import PacMan from "/src/components/widgets/PacMan.jsx"
+import MorphingShapes from "/src/components/widgets/MorphingShapes.jsx"
 import Logo from "/src/components/widgets/Logo.jsx"
 import {useScheduler} from "/src/hooks/scheduler.js"
 import {useUtils} from "/src/hooks/utils.js"
@@ -158,7 +158,7 @@ function PreloaderWindow({ title, subtitle, logoOffset, setDidLoadAllImages, sho
 
     const [didLoadLogo, setDidLoadLogo] = useState(false)
 
-    const [isPacManHidden, setIsPacManHidden] = useState(true)
+    const [isMorphingShapesHidden, setIsMorphingShapesHidden] = useState(true)
 
     const hiddenClass = isHiding ?
         `preloader-window-hidden` : ``
@@ -170,21 +170,20 @@ function PreloaderWindow({ title, subtitle, logoOffset, setDidLoadAllImages, sho
 
     useEffect(() => {
         if(!showElements) {
-            setIsPacManHidden(true)
+            setIsMorphingShapesHidden(true)
             return
         }
 
-        scheduler.clearAllWithTag("preloader-pacman")
+        scheduler.clearAllWithTag("preloader-morphing-shapes")
         scheduler.schedule(() => {
-            setIsPacManHidden(false)
-        }, 100, "preloader-pacman")
+            setIsMorphingShapesHidden(false)
+        }, 100, "preloader-morphing-shapes")
     }, [showElements])
 
     return (
         <div className={`preloader-window ${hiddenClass}`}>
             <div className={`preloader-window-content`}>
-                <PacMan variant={PacMan.ColorVariants.LOADER}
-                        hidden={isPacManHidden}/>
+                <MorphingShapes hidden={isMorphingShapesHidden}/>
 
                 <PreloaderWindowInfo title={title}
                                      subtitle={subtitle}

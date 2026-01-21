@@ -14,6 +14,22 @@ function NavProfileCard({ profile, expanded }) {
     const navigation = useNavigation()
     const utils = useUtils()
 
+    const [currentImageIndex, setCurrentImageIndex] = useState(0)
+    const [animationKey, setAnimationKey] = useState(0)
+    const profileImages = [
+        "images/pictures/profile-picture.jpg",
+        "images/pictures/profile-picture-2.jpg.png"
+    ]
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % profileImages.length)
+            setAnimationKey(prev => prev + 1) // Force le redémarrage de l'animation
+        }, 15000) // Toute l'animation se répète toutes les 15 secondes
+
+        return () => clearInterval(interval)
+    }, [])
+
     const expandedClass = expanded ?
         `` :
         `nav-profile-card-shrink`
@@ -56,10 +72,12 @@ function NavProfileCard({ profile, expanded }) {
 
     return (
         <Card className={`nav-profile-card ${expandedClass}`}>
-            <ImageView src={profilePictureUrl}
-                       className={`nav-profile-card-avatar`}
-                       hideSpinner={true}
-                       alt={name}/>
+            <div className={`nav-profile-card-avatar-container`} key={animationKey}>
+                <ImageView src={profileImages[currentImageIndex]}
+                           className={`nav-profile-card-avatar animated-avatar`}
+                           hideSpinner={true}
+                           alt={name}/>
+            </div>
 
             {statusCircleVisible && (
                 <StatusCircle className={`nav-profile-card-status-circle`}

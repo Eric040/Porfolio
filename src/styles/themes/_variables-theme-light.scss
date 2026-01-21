@@ -18,7 +18,7 @@
  * $texts-inverted: The inverted text color. For example, if your text color is white, this should be black.
  *
  * $base-container-bg: The background color for the sidebar and the main section container.
- * $$base-container-bg-accent: The accent background color. This one is used for inactive elements on the mobile navigation items.
+ * $base-container-bg-accent: The accent background color. This one is used for inactive elements on the mobile navigation items.
  * $base-popover-bg: The standard background color for popovers, such as the language picker.
  * $base-boards: The standard background color for containers inside the section, such as timeline items, cards, info list items, etc.
  * $base-info-badges: The base color for badges, such as the date badge in the timeline.
@@ -33,31 +33,31 @@
 
 @import "theme-variables-builder";
 
-$primary: #269366;
+$primary: #1f5ea8;
 $secondary: darken(#798287, 10%);
-$dark: #bfe0c5;
+$dark: #cfe0f5;
 $danger: #932626;
-$muted: #7c8d7f;
+$muted: #6b7a88;
 
-$base-bg: #91d7aa;
-$base-bg-light: #a6e3b8;
-$base-bg-dark: #7ecb94;
+$base-bg: #eef3f8;
+$base-bg-light: #f6f9fc;
+$base-bg-dark: #dde7f2;
 
 $texts: #202521;
 $texts-inverted: #EEE;
 
-$base-container-bg: #d9f5e0;
-$base-container-bg-accent: #c2e9d0;
-$base-popover-bg: #cae1d4;
-$base-boards: #d2eed8;
-$base-info-badges: #c3e3cd;
-$empty: #e8f8ef;
+$base-container-bg: #f9fbfe;
+$base-container-bg-accent: #e6eef7;
+$base-popover-bg: #eaf1f9;
+$base-boards: #f2f6fb;
+$base-info-badges: #e3edf8;
+$empty: #f7fafc;
 
-$borders: #d9efdc;
+$borders: #e1e8f0;
 $borders-nav-mobile: rgba(white, 0.15);
 $borders-nav-mobile-accent: rgba(white, 0.2);
-$scrollbar-track: #daf5e1;
-$scrollbar-thumb: #55bd91;
+$scrollbar-track: #e9f0f7;
+$scrollbar-thumb: #4b86c2;
 
 [data-theme="light"] {
     @include build-theme(
