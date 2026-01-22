@@ -1,0 +1,44 @@
+{
+    "title": "Mobile Apps Projects (Archived)",
+    "description": "These mobile app projects are archived and not displayed in the main portfolio",
+    "projects": [
+        {
+            "id": 3,
+            "categoryId": "category_apps",
+            "img": "",
+            "faIcon": "fa-solid fa-palette",
+            "faIconColors": {"bg": "#4F46E5", "fill": "#FFFFFF"},
+            "locales": {
+                "en": {
+                    "title": "PaletteCraft"
+                },
+                "fr": {
+                    "title": "PaletteCraft",
+                    "text": "PaletteCraft est une application front-end développée avec React et TailwindCSS. Elle génère automatiquement plusieurs types de palettes à partir d'une seule couleur fournie par l'utilisateur via un input HEX ou un sélecteur color.",
+                    "tags": ["React", "TailwindCSS"],
+                    "demo": "https://palette-craft-eric-toum.netlify.app/",
+                    "github": "https://github.com/Eric040/PaletteCraft"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "categoryId": "category_apps",
+            "img": "",
+            "faIcon": "fa-solid fa-list-check",
+            "faIconColors": {"bg": "#0EA5E9", "fill": "#FFFFFF"},
+            "locales": {
+                "en": {
+                    "title": "TaskFlow"
+                },
+                "fr": {
+                    "title": "TaskFlow",
+                    "text": "TaskFlow est une application de gestion de tâches moderne et réactive, développée en React + TypeScript.Elle permet d'organiser, prioriser et suivre ses tâches avec une interface fluide, responsive et des interactions agréables.",
+                    "tags": ["React", "TypeScript"],
+                    "demo": "https://task-flow-eric-toum.vercel.app/",
+                    "github": "https://github.com/Eric040/TaskFlow"
+                }
+            }
+        }
+    ]
+}

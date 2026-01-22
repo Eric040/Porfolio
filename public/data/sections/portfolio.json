@@ -35,24 +35,24 @@
             "locales": {
                 "en": {
                     "category_all": "All",
-                    "category_web": "Web",
-                    "category_apps": "Apps"
+                    "category_web_app": "Web App",
+                    "category_visuals": "Visuals"
                 },
                 "fr": {
                     "category_all": "Tout",
-                    "category_web": "Web",
-                    "category_apps": "Apps"
+                    "category_web_app": "Web App",
+                    "category_visuals": "Visuels"
                 }
             },
             "settings": {
-                "categorize_by": ["category_web", "category_apps"],
+                "categorize_by": ["category_web_app", "category_visuals"],
                 "order_items_by": "id",
                 "order_items_sort": "asc"
             },
             "items": [
                 {
                     "id": 1,
-                    "categoryId": "category_web",
+                    "categoryId": "category_web_app",
                     "img": "/images/projects/becult-stage/1.png",
                     "faIcon": "",
                     "faIconColors": {"bg": "", "fill": ""},
@@ -81,7 +81,7 @@
                 },
                 {
                     "id": 2,
-                    "categoryId": "category_web",
+                    "categoryId": "category_web_app",
                     "img": "/images/projects/becult-licence/1.jpg",
                     "faIcon": "",
                     "faIconColors": {"bg": "", "fill": ""},
@@ -91,7 +91,7 @@
                         },
                         "fr": {
                             "title": "BECULT (Reprise du projet pour la soutenance de licence)",
-                            "text": "L'application BECULY a été entièrement reprisepour la soutenance de licence en y ajoutant des sections et des fonctionnalités. Les tecnologies utilisées pour la nouvelle version sont laravel 10, livewire 3, bootstrap 5",
+                            "text": "L'application BECULT a été entièrement reprisepour la soutenance de licence en y ajoutant des sections et des fonctionnalités. Les tecnologies utilisées pour la nouvelle version sont laravel 10, livewire 3, bootstrap 5",
                             "tags": ["Laravel", "Livewire", "Bootstrap"],
                             "github": "https://github.com/Eric040/becult-conceptic.git",
                             "images": [
@@ -107,46 +107,8 @@
                     }
                 },
                 {
-                    "id": 3,
-                    "categoryId": "category_apps",
-                    "img": "",
-                    "faIcon": "fa-solid fa-palette",
-                    "faIconColors": {"bg": "#4F46E5", "fill": "#FFFFFF"},
-                    "locales": {
-                        "en": {
-                            "title": "PaletteCraft"
-                        },
-                        "fr": {
-                            "title": "PaletteCraft",
-                            "text": "PaletteCraft est une application front-end développée avec React et TailwindCSS. Elle génère automatiquement plusieurs types de palettes à partir d’une seule couleur fournie par l’utilisateur via un input HEX ou un sélecteur color.",
-                            "tags": ["React", "TailwindCSS"],
-                            "demo": "https://palette-craft-eric-toum.netlify.app/",
-                            "github": "https://github.com/Eric040/PaletteCraft"
-                        }
-                    }
-                },
-                {
-                    "id": 4,
-                    "categoryId": "category_apps",
-                    "img": "",
-                    "faIcon": "fa-solid fa-list-check",
-                    "faIconColors": {"bg": "#0EA5E9", "fill": "#FFFFFF"},
-                    "locales": {
-                        "en": {
-                            "title": "TaskFlow"
-                        },
-                        "fr": {
-                            "title": "TaskFlow",
-                            "text": "TaskFlow est une application de gestion de tâches moderne et réactive, développée en React + TypeScript.Elle permet d’organiser, prioriser et suivre ses tâches avec une interface fluide, responsive et des interactions agréables.",
-                            "tags": ["React", "TypeScript"],
-                            "demo": "https://task-flow-eric-toum.vercel.app/",
-                            "github": "https://github.com/Eric040/TaskFlow"
-                        }
-                    }
-                },
-                {
                     "id": 5,
-                    "categoryId": "category_web",
+                    "categoryId": "category_web_app",
                     "img": "",
                     "faIcon": "fa-solid fa-user",
                     "faIconColors": {"bg": "#111111", "fill": "#FFFFFF"},
@@ -159,6 +121,253 @@
                             "text": "J'ai mis en place ce portfolio pour présenter mes compétences et mes projets en utilisant react et bootstrap.",
                             "tags": ["React", "Bootstrap"],
                             "demo": "https://eric-toum-porfolio.vercel.app/"
+                        }
+                    }
+                },
+                {
+                    "id": 3,
+                    "categoryId": "category_web_app",
+                    "img": "",
+                    "faIcon": "fa-solid fa-palette",
+                    "faIconColors": {"bg": "#4F46E5", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "PaletteCraft"
+                        },
+                        "fr": {
+                            "title": "PaletteCraft",
+                            "text": "PaletteCraft est une application front-end développée avec React et TailwindCSS. Elle génère automatiquement plusieurs types de palettes à partir d'une seule couleur fournie par l'utilisateur via un input HEX ou un sélecteur color.",
+                            "tags": ["React", "TailwindCSS"],
+                            "demo": "https://palette-craft-eric-toum.netlify.app/",
+                            "github": "https://github.com/Eric040/PaletteCraft"
+                        }
+                    }
+                },
+                {
+                    "id": 4,
+                    "categoryId": "category_web_app",
+                    "img": "",
+                    "faIcon": "fa-solid fa-list-check",
+                    "faIconColors": {"bg": "#0EA5E9", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "TaskFlow"
+                        },
+                        "fr": {
+                            "title": "TaskFlow",
+                            "text": "TaskFlow est une application de gestion de tâches moderne et réactive, développée en React + TypeScript.Elle permet d'organiser, prioriser et suivre ses tâches avec une interface fluide, responsive et des interactions agréables.",
+                            "tags": ["React", "TypeScript"],
+                            "demo": "https://task-flow-eric-toum.vercel.app/",
+                            "github": "https://github.com/Eric040/TaskFlow"
+                        }
+                    }
+                },
+                {
+                    "id": 9,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-video",
+                    "faIconColors": {"bg": "#EF4444", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "MeloPulsion Video Thumbnails",
+                            "text": "Design of video thumbnails for MeloPulsion YouTube channel, featuring attractive and professional visual elements.",
+                            "tags": ["Thumbnail Design", "YouTube", "Video Marketing"]
+                        },
+                        "fr": {
+                            "title": "Miniatures Vidéos MeloPulsion",
+                            "text": "Création des miniatures de vidéos pour la chaîne YouTube MeloPulsion, avec des éléments visuels attractifs et professionnels.",
+                            "tags": ["Design Miniature", "YouTube", "Marketing Vidéo"]
+                        }
+                    }
+                },
+                {
+                    "id": 10,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-music",
+                    "faIconColors": {"bg": "#F59E0B", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "MeloPulsion Logo Design",
+                            "text": "Complete logo design for MeloPulsion music chanel, including variations and brand guidelines.",
+                            "tags": ["Logo Design", "Branding", "Music Industry"]
+                        },
+                        "fr": {
+                            "title": "Logo MeloPulsion",
+                            "text": "Design complet du logo pour la chaine musicale MeloPulsion, incluant variations et guidelines de marque.",
+                            "tags": ["Design Logo", "Branding", "Industrie Musicale"]
+                        }
+                    }
+                },
+                {
+                    "id": 11,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-spa",
+                    "faIconColors": {"bg": "#EC4899", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "Saba Cosmetics Product Labels",
+                            "text": "Design of product labels for Saba Cosmetics, featuring elegant typography and premium aesthetic.",
+                            "tags": ["Label Design", "Packaging", "Cosmetics"]
+                        },
+                        "fr": {
+                            "title": "Étiquettes Saba Cosétiques",
+                            "text": "Design des étiquettes de produits pour Saba Cosétiques, avec typographie élégante et esthétique premium.",
+                            "tags": ["Design Étiquette", "Packaging", "Cosmétiques"]
+                        }
+                    }
+                },
+                {
+                    "id": 12,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-utensils",
+                    "faIconColors": {"bg": "#10B981", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "La Paillotte Restaurant Poster",
+                            "text": "Promotional poster design for La Paillote restaurant in Djougou, featuring appetizing food photography and event information.",
+                            "tags": ["Poster Design", "Restaurant", "Promotional"]
+                        },
+                        "fr": {
+                            "title": "Affiche Restaurant La Paillotte",
+                            "text": "Affiche promotionnelle pour le restaurant La Paillote à Djougou, avec photographie appétissante et informations événementielles.",
+                            "tags": ["Design Affiche", "Restaurant", "Promotionnel"]
+                        }
+                    }
+                },
+                {
+                    "id": 13,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-graduation-cap",
+                    "faIconColors": {"bg": "#3B82F6", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "UNEB Event Poster",
+                            "text": "Event poster design for UNEB (National Union of Benin Students), featuring educational themes and event details.",
+                            "tags": ["Event Design", "Educational", "UNEB"]
+                        },
+                        "fr": {
+                            "title": "Affiche Événementielle UNEB",
+                            "text": "Affiche événementielle pour l'UNEB (Union Nationale des Étudiants du Bénin), avec thèmes éducatifs et détails événementiels.",
+                            "tags": ["Design Événementiel", "Éducatif", "UNEB"]
+                        }
+                    }
+                },
+                {
+                    "id": 14,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-id-card",
+                    "faIconColors": {"bg": "#8B5CF6", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "AERAM Badge Design",
+                            "text": "Professional badge design for the AERAM executive office, with corporate branding and security features.",
+                            "tags": ["Badge Design", "Corporate", "Identity"]
+                        },
+                        "fr": {
+                            "title": "Badge AERAM",
+                            "text": "Design professionnel de badge pour le bureau exécutif de l'AERAM, avec branding d'entreprise et fonctionnalités de sécurité.",
+                            "tags": ["Design Badge", "Corporate", "Identité"]
+                        }
+                    }
+                },
+                {
+                    "id": 15,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-leaf",
+                    "faIconColors": {"bg": "22C55E", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "Bio's Crops Advertisement",
+                            "text": "Advertisement poster design for Bio's Crops agricultural company, featuring organic products and sustainable farming themes.",
+                            "tags": ["Advertisement", "Agriculture", "Organic"]
+                        },
+                        "fr": {
+                            "title": "Affiche Publicitaire Bio's Crops",
+                            "text": "Affiche publicitaire pour l'entreprise agricole Bio's Crops, avec produits biologiques et thèmes d'agriculture durable.",
+                            "tags": ["Publicité", "Agriculture", "Biologique"]
+                        }
+                    }
+                },
+                {
+                    "id": 16,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-road",
+                    "faIconColors": {"bg": "#F97316", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "Excellence's Road Advertisement",
+                            "text": "Advertisement poster for Excellence's Road, featuring transportation services and logistics solutions.",
+                            "tags": ["Advertisement", "Transportation", "Logistics"]
+                        },
+                        "fr": {
+                            "title": "Affiche Publicitaire Excellence's Road",
+                            "text": "Affiche publicitaire pour Excellence's Road, avec services de transport et solutions logistiques.",
+                            "tags": ["Publicité", "Transport", "Logistique"]
+                        }
+                    }
+                },
+                {
+                    "id": 17,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-birthday-cake",
+                    "faIconColors": {"bg": "#A855F7", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "Birthday Event Posters",
+                            "text": "Collection of birthday event posters, featuring festive designs and personalized themes for various celebrations.",
+                            "tags": ["Event Design", "Birthday", "Celebration"]
+                        },
+                        "fr": {
+                            "title": "Affiches Événementielles Anniversaires",
+                            "text": "Collection d'affiches événementielles pour anniversaires, avec designs festifs et thèmes personnalisés pour diverses célébrations.",
+                            "tags": ["Design Événementiel", "Anniversaire", "Célébration"]
+                        }
+                    }
+                },
+                {
+                    "id": 18,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-store",
+                    "faIconColors": {"bg": "#06B6D4", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "Gladys Store Event Poster",
+                            "text": "Event poster design for Gladys Store, featuring promotional offers and store special events.",
+                            "tags": ["Event Design", "Retail", "Promotion"]
+                        },
+                        "fr": {
+                            "title": "Affiche Événementielle Gladys Store",
+                            "text": "Affiche événementielle pour Gladys Store, avec offres promotionnelles et événements spéciaux du magasin.",
+                            "tags": ["Design Événementiel", "Commerce", "Promotion"]
+                        }
+                    }
+                },
+                {
+                    "id": 6,
+                    "categoryId": "category_visuals",
+                    "img": "",
+                    "faIcon": "fa-solid fa-paint-brush",
+                    "faIconColors": {"bg": "#EC4899", "fill": "#FFFFFF"},
+                    "locales": {
+                        "en": {
+                            "title": "BECULT Cultural Identity",
+                            "text": "Complete visual identity design for BECULT cultural platform, including logo, color palette, and UI design system.",
+                            "tags": ["Branding", "UI Design", "Cultural Heritage"]
+                        },
+                        "fr": {
+                            "title": "Identité Visuelle BECULT",
+                            "text": "Conception complète de l'identité visuelle pour la plateforme culturelle BECULT, incluant logo, palette de couleurs et système de design UI.",
+                            "tags": ["Branding", "Design UI", "Patrimoine Culturel"]
                         }
                     }
                 }
