@@ -40,8 +40,8 @@
                 },
                 {
                     "id": 3,
-                    "label": "01 68 92 92 23",
-                    "link": {"href": "tel:0168929223", "tooltipString": ""},
+                    "label": "01 48 42 42 23",
+                    "link": {"href": "tel:0148424223", "tooltipString": ""},
                     "faIcon": "fa-solid fa-phone"
                 }
             ]

@@ -91,7 +91,7 @@
                     "date": {"year": 2026, "month": 1, "day": 19},
                     "preview": {
                         "links": [
-                            {"href": "https://eric-toum-porfolio.vercel.app/", "tooltipString": "open_website", "faIcon": "fa-solid fa-arrow-up-right-from-square"}
+                            {"href": "https://eric-toumoudagou.vercel.app/", "tooltipString": "open_website", "faIcon": "fa-solid fa-arrow-up-right-from-square"}
                         ],
                         "screenshots": [],
                         "screenshotsAspectRatio": "",

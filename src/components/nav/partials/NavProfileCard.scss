@@ -145,6 +145,53 @@ div.nav-profile-card {
             min-height: 25px;
         }
     }
+
+    // Mobile-only resume download button
+    div.nav-profile-card-mobile-resume {
+        display: none;
+        justify-content: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
+            display: flex;
+        }
+
+        button.nav-profile-card-resume-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, var(--bs-blue), var(--bs-info), var(--bs-blue));
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(var(--bs-primary-rgb), 0.3);
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.4);
+                background: var(--bs-primary);
+                filter: brightness(1.1);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+
+            i {
+                font-size: 0.9rem;
+            }
+
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
 }
 
 div.nav-profile-card-shrink {

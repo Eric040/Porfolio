@@ -2,7 +2,7 @@
     "name": "TOUMOUDAGOU Eric",
 
     "profilePictureUrl": "images/pictures/profile-picture.jpg",
-    "resumePdfUrl": "files/resumePDF.pdf",
+    "resumePdfUrl": "files/Eric TOUMOUDAGOU.pdf",
 
     "statusCircleVisible": true,
     "statusCircleVariant": "available",
@@ -21,7 +21,7 @@
         "fr": {
             "status_message_available_for_freelance": "Disponible pour freelance !",
             "roles": [
-                "Graphiste Designer",
+                "Graphiste",
                 "Développeur Web"
             ]
         }
